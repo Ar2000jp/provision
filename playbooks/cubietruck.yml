@@ -22,7 +22,7 @@
 
   vars:
     # Common vars
-    provision__base_dir: "/usr/local/tunapanda"
+    provision__base_dir: "/opt/tunapanda"
     provision__data_dir: "{{ provision__base_dir }}/data"
     provision__ext_dir: "{{ provision__base_dir }}/provision/ext"
     provision__default_packages: [ git, vim, screen ] 
