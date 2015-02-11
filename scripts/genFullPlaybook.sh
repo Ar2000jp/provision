@@ -25,6 +25,6 @@ echo "  vars:" >> fullPlaybook.yml
     if [ -f roles/$r/defaults/main.yml ];
         then echo "" ;
 	echo "    ## $r role" ;
-	cat roles/$r/defaults/main.yml | grep -v '^---' | grep -v '^[[:space:]]*$' | sed 's,^[[:space:]]*,    ,';
+	cat roles/$r/defaults/main.yml | grep -v '^---' | grep -v '^[[:space:]]*$' | sed 's,^,    ,';
     fi
  done) >> fullPlaybook.yml
