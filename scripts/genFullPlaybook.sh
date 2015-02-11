@@ -4,6 +4,8 @@ cat > fullPlaybook.yml <<EOF
 ### AUTO-GENERATED ###
 - hosts: all
   pre_tasks:
+    - file: path='{{ provision__base_dir }}' state=directory
+        owner=root group=root mode=0755
     - shell: echo "Last provisioning started at \$(date)" > {{ provision__base_dir }}/provisioning.txt
   post_tasks:
     - shell: echo "Last provisioning completed at \$(date)" >> {{ provision__base_dir }}/provisioning.txt
